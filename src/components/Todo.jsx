@@ -1,7 +1,7 @@
 import React from "react";
 import {BiTrashAlt} from 'react-icons/bi'
 
-function Todo() {
+function Todo(props) {
   return (
     <li className="flex justify-between items-center">
       <div className="flex items-center gap-4">
@@ -15,7 +15,7 @@ function Todo() {
             />
           </label>
         </div>
-        <span>Todo text</span>
+        <span>{props.todo.title }</span>
       </div>
       <button className="btn btn-error btn-square btn-sm text-xl text-white">
           <BiTrashAlt/>
